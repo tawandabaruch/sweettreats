@@ -1,0 +1,18 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
