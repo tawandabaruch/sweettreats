@@ -12,7 +12,7 @@
 }
 
 .cake{
-    width: 400px;
+    width: 300px;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -53,54 +53,20 @@
     padding: 10px 20px;
     cursor: pointer;
 }
-.menu-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: cadetblue;
-    color: white;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-.logo span {
-  font-size: 2rem; /* Change the font size to whatever size you want */
-}
-
-.logo img{
-    margin-right: 10px;
-}
-.menu-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.menu-list button {
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.menu-list li{
-    margin-right: 20px;
-}
-.menu-list:last-child{
-    margin-right: 0;
-}
-.menu-list li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
 .banner {
   background-color: #f8d7da;
   color: #721c24;
-  padding: 10px;
+  padding: 100px 10px;
   text-align: center;
 }
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  padding: 20px;
+    color: white;
+
+}
+
