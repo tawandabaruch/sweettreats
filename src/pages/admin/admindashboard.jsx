@@ -5,7 +5,7 @@ function AdminDashboard() {
   const [cakeName, setCakeName] = useState('');
   const [cakeDescription, setCakeDescription] = useState('');
   const [cakeImage, setCakeImage] = useState('');
-  const [cakePrice, setCakePrice] = useState(0);
+  const [cakePrice, setCakePrice] = useState('');
   const [galleryImages, setGalleryImages] = useState([]);
 
   const handleFormSubmit = (e) => {
@@ -32,7 +32,16 @@ function AdminDashboard() {
     }
   };
 
-  return (
+const handleImageSelect = (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => {
+    const imageDataURL = reader.result.toString();
+    setCakeImage(imageDataURL);
+  };
+};
+   return (
     <div className="admin-dashboard">
       <h2>Add a new cake</h2>
       <form onSubmit={handleFormSubmit}>
@@ -60,14 +69,11 @@ function AdminDashboard() {
           />
         </label>
         <label>
-          Image URL:
-          <input
-            type="text"
-            value={cakeImage}
-            onChange={(e) => setCakeImage(e.target.value)}
-          />
+          Image:
+          <input type="file" accept="image/*" onChange={handleImageSelect} />
         </label>
         <button type="submit">Add Cake</button>
+        <button className="view-orders-button">View Orders</button>
       </form>
       <div className="gallery">
         <h2>Gallery</h2>
@@ -82,3 +88,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+
